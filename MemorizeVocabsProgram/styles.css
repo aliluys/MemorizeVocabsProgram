@@ -1,0 +1,139 @@
+/* 保持页面整体布局 */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+}
+
+/* 容器的样式 */
+.container {
+    background-color: white;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    width: 320px; /* 略微增加容器宽度 */
+    text-align: center;
+    box-sizing: border-box;
+}
+
+/* 输入框样式 */
+input[type="file"],
+input[type="number"] {
+    margin-bottom: 20px;
+    padding: 10px;
+    width: 100%;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    transition: border-color 0.3s ease;
+}
+
+input[type="file"]:focus,
+input[type="number"]:focus {
+    border-color: #007bff;
+    outline: none;
+}
+
+/* 开始按钮的样式 */
+#startButton {
+    display: block;
+    margin: 0 auto 10px; /* 调整下边距 */
+    padding: 12px 24px;
+    font-size: 16px;
+    font-weight: bold;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 50px; /* 使按钮变为椭圆形 */
+    cursor: pointer;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+}
+
+#startButton:hover {
+    background-color: #0056b3;
+    transform: translateY(-1px);
+}
+
+/* 其他按钮的样式 */
+button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 50px; /* 使按钮变为椭圆形 */
+    cursor: pointer;
+    margin: 5px;
+    display: inline-block;
+    font-size: 16px;
+    transition: all 0.3s ease;
+}
+
+button:hover {
+    background-color: #0056b3;
+    transform: translateY(-1px);
+}
+
+button:active {
+    background-color: #003d80;
+    transform: translateY(1px);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+/* 按钮容器 */
+.button-container {
+    display: flex;
+    flex-direction: column; /* 按竖直方向排列按钮 */
+    align-items: center; /* 居中对齐 */
+    margin-top: 20px;
+}
+
+/* 上一页、查看释义、下一页按钮在同一行 */
+.button-container .row-buttons {
+    display: flex;
+    justify-content: center; /* 水平居中对齐 */
+    width: 100%;
+    margin-bottom: 10px; /* 为下一行按钮添加间距 */
+}
+
+/* 收集按钮的样式 */
+#collectButton {
+    margin: 0 5px;
+    width: auto; /* 使按钮宽度自适应 */
+    min-width: 120px; /* 设置最小宽度，防止按钮过小 */
+}
+
+/* 查看按钮 */
+#viewMeaningButton {
+    margin-top: 10px;
+}
+
+/* 进度条的样式 */
+#progressContainer {
+    margin-top: 20px;
+    overflow: hidden;
+}
+
+#progressBar {
+    width: 0%;
+    height: 20px;
+    background-color: #007bff;
+    transition: width 0.5s ease-in-out;
+    max-width: 100%;
+}
+
+#progressText {
+    margin: 0;
+    padding: 5px;
+    text-align: center;
+}
+
+/* 保证按钮不被压缩 */
+.button-container > button {
+    flex-grow: 0;
+    flex-shrink: 0;
+    width: auto;
+}

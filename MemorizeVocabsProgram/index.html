@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>单词复习程序</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1 id="welcomeMessage">欢迎开始学习</h1>
+        <input type="file" id="fileInput" accept=".xlsx,.txt" style="display:none;" />      
+        <label for="numWords" id="numWordsLabel" style="display:none;">每次抽取的单词数量:</label>
+        <input type="number" id="numWords" value="5" min="1" style="display:none;" placeholder="请输入要抽取的单词数量" />
+        <button id="startButton" style="display:none;">开始学习</button>
+        <p id="statusMessage"></p>
+        <p id="randomWord"></p>
+        <p id="kanjiMeaning"></p>
+        <div class="button-container">
+            <div class="row-buttons">
+                <button id="prevButton" style="display:none;">&#9664;</button>
+                <button id="viewMeaningButton" style="display:none;">查看释义</button>
+                <button id="nextButton" style="display:none;">&#9654;</button>
+            </div>
+            <button id="collectButton" style="display:none;">收藏单词</button>
+        </div>
+
+        <button id="viewMeaningButton" style="display:none;">查看释义</button>
+        <br />
+        <button id="continueButton" style="display:none;">继续学习</button>
+        <button id="endButton" style="display:none;">结束学习</button>
+        <div id="progressContainer" style="margin-top: 20px;">
+            <div id="progressBar" style="width: 0%; height: 20px; background-color: #007bff; transition: width 0.5s ease-in-out;"></div>
+            <p id="progressText" style="margin: 0; padding: 5px;">已浏览 0 / 0 个单词</p>
+            <p id="currentWordNumber" style="margin: 0; padding: 5px;">这是第 0 个单词</p>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.17.5/xlsx.full.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
